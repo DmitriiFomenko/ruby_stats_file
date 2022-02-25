@@ -8,9 +8,10 @@ class StatsFile
     @countWord = arrayWord.length
 
     @hashLength = Hash.new
+    @hashLength.default = 0
     arrayWord.each do |word|
       n = word.length
-      @hashLength[n] = @hashLength[n].to_i + 1
+      @hashLength[n] += 1
     end
   end
 
